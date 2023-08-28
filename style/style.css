@@ -1,0 +1,303 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* General */
+:root {
+    --primary_color: #14348C;
+    --secundary_color: #5F80D9;
+    --text_color: #555555;
+    --white_color: #ffff;
+    --black_color: #000000;
+    --yellow_color: #D9B459;
+    --light_yello_color: #FFEBB8;
+    --brown_color: #8C712B;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+    color: var(--text_color);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6em;
+    letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+p,
+ul,
+li {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#one,
+#two,
+#three {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+/*SECTION ONE*/
+
+div.title h1 {
+    font-size: 56px;
+    margin-bottom: 3rem;
+    color: var(--primary_color);
+}
+
+div.title p {
+    font-size: 18px;
+}
+
+.info img {
+    width: 100px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.infor__api,
+.info__github {
+    /*  border: 2px solid var(--primary_color);
+    padding: .5rem;
+    border-radius: 4px; */
+    margin: .5rem;
+}
+
+/*SECTION TWO*/
+#two {
+    justify-content: space-evenly;
+    margin-top: 6rem;
+}
+
+#city {
+    border: 0;
+    border-bottom: 2px solid var(--yellow_color);
+    border-radius: .25rem;
+    padding: 4px 16px;
+    margin-right: 1rem;
+    transition:
+        transform 150ms ease-in-out,
+        box-shadow 150ms ease-in-out;
+
+}
+
+#city:focus-visible {
+    transform: translate(-2px, -2px);
+    box-shadow: 0px 1px 4px 2px rgba(146, 165, 184, 1);
+    ;
+    outline: none;
+}
+
+#searchCity {
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    letter-spacing: 1px;
+    border-radius: 8px;
+    padding: 2px 16px;
+    transition:
+        transform 50ms,
+}
+
+#searchCity:hover {
+    cursor: pointer;
+}
+
+#searchCity:active {
+    transform: translate(1px, 1px);
+}
+
+.col2 {
+    border: 2px solid var(--secundary_color);
+    border-radius: 1rem;
+}
+
+.col2 p {
+    border-bottom: 2px solid var(--secundary_color);
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0 12px;
+}
+
+.col2 p:first-child {
+    margin-top: 8px;
+}
+
+.col2 p:nth-child(3) {
+    padding-bottom: 8px;
+    margin: 0;
+    border-bottom: 0;
+}
+
+.spanCity {
+    margin: 8px;
+    text-align: center;
+}
+
+/*SECTION THREE*/
+.box {
+    border: 1px solid var(--black_color);
+    padding: 16px;
+    border-radius: 0.5rem;
+    background-color: var(--secundary_color);
+    box-shadow: 0 1px 4px 2px var(--secundary_color);
+    min-width: 250px;
+}
+
+.box div p {
+    color: var(--white_color);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.sect3 img {
+    margin: 0 auto;
+}
+
+.sect1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 610px) {
+
+    #one,
+    #two,
+    #three {
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+
+    /*section one*/
+
+    div.title {
+        text-align: center;
+        line-height: 56px;
+    }
+
+    /*section two*/
+    #two {
+        margin-top: 50px;
+    }
+
+    .col1 {
+        display: flex;
+        margin-bottom: 2rem;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .col2 p:nth-child(3) {
+        flex-direction: column;
+    }
+
+    .col2 p:nth-child(3) img {
+        width: 80px;
+    }
+
+    #city {
+        margin: 0;
+    }
+/*section three*/
+    .box {
+        margin: 50px 8px;
+    }
+}

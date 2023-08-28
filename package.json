@@ -1,0 +1,22 @@
+{
+  "name": "workshop-api",
+  "version": "1.0.0",
+  "description": "Un proyecto creado para llamar a 3 api de clima, nombre de paises y bandera del pais",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/oscarc73/workshop-API.git"
+  },
+  "author": "Oscar Carabali <oscar.jcarabali@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oscarc73/workshop-API/issues"
+  },
+  "homepage": "https://github.com/oscarc73/workshop-API#readme",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}

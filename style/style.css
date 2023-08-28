@@ -264,6 +264,7 @@ div.title p {
     #three {
         flex-direction: column;
         margin: 0 1rem;
+        margin-top: 3rem
     }
 
     /*section one*/

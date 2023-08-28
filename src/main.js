@@ -69,7 +69,7 @@ const createDivTemp = (temp, feelsTemp, humidity, weather, description, icon, na
 //call API's
 const callApis = () => {
     console.log('start function');
-    const urlLocations = `http://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=1&appid=${APIKey}`;
+    const urlLocations = `https://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=1&appid=${APIKey}`;
 
     //call attributes
     const fetchCityData = async () => {
